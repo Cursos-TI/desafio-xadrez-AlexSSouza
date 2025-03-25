@@ -7,15 +7,37 @@
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-
+    const int TABULEIRO = 8;
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-
+    printf("\nMovimentação do Bispo:\n");
+    int linha = 4, coluna = 4; //Posição inicial
+    for (int i = 1; i < TABULEIRO; i++){
+        printf("Diagonal: (%d, %d), (%d, %d), (%d, %d), (%d, %d)\n",
+              linha + i, coluna + i, linha - i, coluna - i,
+              linha + i, coluna - i, linha - i, coluna + i);
+    }
+    
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
+    printf("\n Movimentação da Torre:\n");
+    for (int i = 1; i <= TABULEIRO; i++){
+        printf("Linha: (%d, %d)\n", linha, i); //Horizontal
+        printf("Coluna: (%d, %d)\n", i, coluna); //Vertical
+    }
+    
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    printf("\n Movimentação da Rainha: \n");
+    for (int i = 1; i < TABULEIRO; i++){
+        printf("Diagonal: (%d, %d), (%d, %d), (%d, %d), (%d, %d)\n",
+              linha + i, coluna + i, linha - i, coluna - i,
+              linha + i, coluna - i, linha - i, coluna + i);
+    } 
+    for (int i = 1; i <= TABULEIRO; i++){
+        printf("Linha: (%d, %d)\n", linha, i); 
+        printf("Coluna: (%d, %d)\n", i, coluna);
+    }   
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
